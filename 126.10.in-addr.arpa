@@ -1,0 +1,15 @@
+$TTL 500
+126.10.in-addr.arpa.   IN      SOA     dns.ffffm. info\.ffm.freifunk.net.     (
+       2017040301      ;serial
+       1h                 ;refresh
+       3m                   ;retry
+       1h              ;expire
+       1m                ;minimum
+       )
+ 
+       NS      dns.ffffm.
+ 
+3.255	IN	PTR	search.ffffm.
+14.255	IN	PTR	dns.ffffm.
+14.255	IN	PTR	ntp.ffffm.
+
