@@ -1,7 +1,7 @@
 ; ffffm
 $TTL 500
 ffffm. IN     SOA    dns.ffm.freifunk.net. info@wifi-frankfurt.de. (
-	2014071301  ; Serial
+	2016042201  ; Serial
 	3H          ; refresh after 3 hours
 	1H          ; retry after 1 hour
 	1W          ; expire after 1 week
@@ -20,11 +20,11 @@ ffffm.			IN A		10.126.255.14
 2.fastd.services.ffffm.	300	IN	A	10.126.255.15
 2.fastd.services.ffffm.	300	IN	AAAA	2001:1a50:11:4::3
 1.ntp.services.ffffm.	300	IN	A	10.126.255.14
-1.ntp.services.ffffm.	300	IN	AAAA	fddd:5d16:b5dd:a100::1
+1.ntp.services.ffffm.	300	IN	AAAA	fddd:5d16:b5dd:0:743a:f7ff:febc:5ca1
 1.updates.services.ffffm.	300	IN	A	10.126.255.6
-1.updates.services.ffffm.	300	IN	AAAA	2001:1a50:11:4::6
+1.updates.services.ffffm.	300	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4
 1.dl.services.ffffm.	300	IN	A	10.126.255.6
-1.dl.services.ffffm.	300	IN	AAAA	2001:1a50:11:4::6
+1.dl.services.ffffm.	300	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4
 1.inetgw.services.ffffm.	300	IN	A	10.126.255.11
 1.build.services.ffffm.	300	IN	A	10.126.255.3
 1.stats.services.ffffm.	300	IN	A	10.126.255.8
@@ -36,9 +36,12 @@ ffffm.			IN A		10.126.255.14
 1.register.services.ffffm.	300	IN	A	10.126.255.7
 1.uberspace.servers.ffffm.	300	IN	A	10.126.255.2
 1.yacy.services.ffffm.	300	IN	A	10.126.255.3
-1.oc.services.ffffm.	300	IN	A	10.126.255.16
+1.seafile.services.ffffm.	300	IN	A	10.126.255.17
 1.bind.services.ffffm.	300	IN	A	10.126.255.14
-2.bind.services.ffffm.	300	IN	A	10.126.255.16
+;2.bind.services.ffffm.	300	IN	A	10.126.255.16
+speedtest		300	IN	A	10.126.255.19
+speedtest		300	IN	AAAA	fddd:5d16:b5dd:0:3072:9ff:fe19:d546
+map			300	IN	CNAME	1.map.services.ffffm.
 
 dns			IN	CNAME	1.bind.services
 search.ffffm.        	IN      CNAME	1.yacy.services.ffffm.
