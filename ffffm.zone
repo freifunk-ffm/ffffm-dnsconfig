@@ -47,6 +47,11 @@ dns			IN	CNAME	1.bind.services
 search.ffffm.        	IN      CNAME	1.yacy.services.ffffm.
 ntp.ffffm.		IN	CNAME	1.ntp.services.ffffm.
 
+nextnode		IN	A	10.126.0.1
+next-node		IN	CNAME	nextnode
+ffnn			IN	CNAME	nextnode
+nn			IN	CNAME	nextnode
+
 ;fastd2.ffm.freifunk.net 300	IN	A	185.37.145.37
 ; rESOURCe Record - veryfy the IP where your mails come from(disable if not needed)
 ; @	IN TXT		"v=spf1 ip4:85.214.123.0/24 -all"
