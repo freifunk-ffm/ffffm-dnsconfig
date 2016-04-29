@@ -1,7 +1,7 @@
 ; ffffm
 $TTL 500
-ffffm. IN     SOA    dns.ffm.freifunk.net. info@wifi-frankfurt.de. (
-	2016043001  ; Serial
+ffffm. IN     SOA    dns.ffm.freifunk.net. info.wifi-frankfurt.de. (
+	2016043002  ; Serial
 	3H          ; refresh after 3 hours
 	1H          ; retry after 1 hour
 	1W          ; expire after 1 week
