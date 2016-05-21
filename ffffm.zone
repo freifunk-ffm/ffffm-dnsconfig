@@ -36,7 +36,6 @@ dl.services.ffffm.	300     IN      AAAA    fddd:5d16:b5dd:0:5054:ff:fe05:66e2 ; 
 
 1.inetgw.services.ffffm.	300	IN	A	10.126.255.11
 1.stats.services.ffffm.	300	IN	A	10.126.255.8
-1.database.services.ffffm.	300	IN	A	10.126.255.4
 1.dns.services.ffffm.	300	IN	A	10.126.255.14
 1.mail.services.ffffm.	300	IN	A	10.126.255.10
 1.map.services.ffffm.	300	IN	A	10.126.255.5
@@ -49,8 +48,10 @@ speedtest		300	IN	A	10.126.255.19
 speedtest		300	IN	AAAA	fddd:5d16:b5dd:0:3072:9ff:fe19:d546
 
 map			300	IN	CNAME	1.map.services.ffffm.
+hopglass		300	IN	A	10.126.255.30
 dns			IN	CNAME	1.bind.services
 ntp			IN	CNAME	1.ntp.services.ffffm.
+dl			IN	CNAME	dl.services.ffffm.
 
 nextnode		IN	A	10.126.0.1
 next-node		IN	CNAME	nextnode
