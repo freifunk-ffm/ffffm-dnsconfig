@@ -1,7 +1,7 @@
 ; ffffm
 $TTL 300	; 5 minutes
 ffffm.	IN	SOA	dns.ffm.freifunk.net. info.wifi-frankfurt.de. (
-	2016053104	; Serial
+	2016053105	; Serial
 	3H	; refresh after 3 hours
 	1H	; retry after 1 hour
 	1W	; expire after 1 week
@@ -16,37 +16,38 @@ ffffm.	IN	SOA	dns.ffm.freifunk.net. info.wifi-frankfurt.de. (
 
 ffffm.	IN	A	10.126.255.14
 
-
-1.ntp.services.ffffm.	IN	A	10.126.255.14
-1.ntp.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:743a:f7ff:febc:5ca1
-
-
-1.dl.services.ffffm.	IN	A	10.126.255.6
-1.dl.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4
-2.dl.services.ffffm.	IN	A	10.126.255.20
-2.dl.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2
-dl.services.ffffm.	IN	A	10.126.255.6	; 1.dl.services.ffffm.
-dl.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4	; 1.dl.services.ffffm.
-dl.services.ffffm.	IN	A	10.126.255.20	; 2.dl.services.ffffm.
-dl.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2	; 2.dl.services.ffffm.
+$ORIGIN services.ffffm.
+1.ntp	IN	A	10.126.255.14
+1.ntp	IN	AAAA	fddd:5d16:b5dd:0:743a:f7ff:febc:5ca1
 
 
-1.updates.services.ffffm.	IN	CNAME	1.dl.services.ffffm.
-2.updates.services.ffffm.	IN	CNAME	2.dl.services.ffffm.
-updates.services.ffffm.	IN	CNAME	dl.services.ffffm.
+1.dl	IN	A	10.126.255.6
+1.dl	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4
+2.dl	IN	A	10.126.255.20
+2.dl	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2
+dl	IN	A	10.126.255.6	; 1.dl.services.ffffm.
+dl	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4	; 1.dl.services.ffffm.
+dl	IN	A	10.126.255.20	; 2.dl.services.ffffm.
+dl	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2	; 2.dl.services.ffffm.
 
 
-1.inetgw.services.ffffm.	IN	A	10.126.255.11
-1.stats.services.ffffm.	IN	A	10.126.255.8
-1.dns.services.ffffm.	IN	A	10.126.255.14
-1.mail.services.ffffm.	IN	A	10.126.255.10
-1.map.services.ffffm.	IN	A	10.126.255.5
-1.proxy.services.ffffm.	IN	A	10.126.255.6
+1.updates	IN	CNAME	1.dl.services.ffffm.
+2.updates	IN	CNAME	2.dl.services.ffffm.
+updates	IN	CNAME	dl.services.ffffm.
+
+
 1.uberspace.servers.ffffm.	IN	A	10.126.255.2
-1.seafile.services.ffffm.	IN	A	10.126.255.17
-1.bind.services.ffffm.	IN	A	10.126.255.14
+1.inetgw	IN	A	10.126.255.11
+1.stats	IN	A	10.126.255.8
+1.dns	IN	A	10.126.255.14
+1.mail	IN	A	10.126.255.10
+1.map	IN	A	10.126.255.5
+1.proxy	IN	A	10.126.255.6
+1.seafile	IN	A	10.126.255.17
+1.bind	IN	A	10.126.255.14
 
 
+$ORIGIN ffffm.
 speedtest	IN	A	10.126.255.19
 speedtest	IN	AAAA	fddd:5d16:b5dd:0:3072:9ff:fe19:d546
 
