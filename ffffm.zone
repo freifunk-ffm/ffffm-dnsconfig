@@ -1,57 +1,65 @@
 ; ffffm
-$TTL 500
-ffffm. IN     SOA    dns.ffm.freifunk.net. info.wifi-frankfurt.de. (
-	2016053103  ; Serial
-	3H          ; refresh after 3 hours
-	1H          ; retry after 1 hour
-	1W          ; expire after 1 week
-	1D)         ; minimum TTL of 1 day
+$TTL 300	; 5 minutes
+ffffm.	IN	SOA	dns.ffm.freifunk.net. info.wifi-frankfurt.de. (
+	2016053104	; Serial
+	3H	; refresh after 3 hours
+	1H	; retry after 1 hour
+	1W	; expire after 1 week
+	1D	; minimum TTL of 1 day
+)
 
-  ; Name Server
-  IN	NS	dns.ffm.freifunk.net.
+; Name Server
+@	IN	NS	dns.ffm.freifunk.net.
 
-  ; Mail Exchanger
-  IN	MX	50 mail.ffm.freifunk.net.	; Your Mail Server
+; Mail Exchanger
+@	IN	MX	50	mail.ffm.freifunk.net.
 
-ffffm.			IN A		10.126.255.14
+ffffm.	IN	A	10.126.255.14
 
-1.ntp.services.ffffm.	300	IN	A	10.126.255.14
-1.ntp.services.ffffm.	300	IN	AAAA	fddd:5d16:b5dd:0:743a:f7ff:febc:5ca1
 
-1.dl.services.ffffm.	300	IN	A	10.126.255.6
-1.dl.services.ffffm.	300	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4
-2.dl.services.ffffm.	300	IN	A	10.126.255.20
-2.dl.services.ffffm.	300	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2
-dl.services.ffffm.	300	IN	A	10.126.255.6 ; 1.dl.services.ffffm.
-dl.services.ffffm.	300	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4 ; 1.dl.services.ffffm.
-dl.services.ffffm.      300     IN      A       10.126.255.20 ; 2.dl.services.ffffm.
-dl.services.ffffm.      300     IN      AAAA    fddd:5d16:b5dd:0:5054:ff:fe05:66e2 ; 2.dl.services.ffffm.
+1.ntp.services.ffffm.	IN	A	10.126.255.14
+1.ntp.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:743a:f7ff:febc:5ca1
 
-1.updates.services.ffffm.	300	IN	CNAME	1.dl.services.ffffm.
-2.updates.services.ffffm.	300     IN      CNAME	2.dl.services.ffffm.
-updates.services.ffffm.	300	IN	CNAME	dl.services.ffffm.
 
-1.inetgw.services.ffffm.	300	IN	A	10.126.255.11
-1.stats.services.ffffm.	300	IN	A	10.126.255.8
-1.dns.services.ffffm.	300	IN	A	10.126.255.14
-1.mail.services.ffffm.	300	IN	A	10.126.255.10
-1.map.services.ffffm.	300	IN	A	10.126.255.5
-1.proxy.services.ffffm.	300	IN	A	10.126.255.6
-1.uberspace.servers.ffffm.	300	IN	A	10.126.255.2
-1.seafile.services.ffffm.	300	IN	A	10.126.255.17
-1.bind.services.ffffm.	300	IN	A	10.126.255.14
+1.dl.services.ffffm.	IN	A	10.126.255.6
+1.dl.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4
+2.dl.services.ffffm.	IN	A	10.126.255.20
+2.dl.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2
+dl.services.ffffm.	IN	A	10.126.255.6	; 1.dl.services.ffffm.
+dl.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4	; 1.dl.services.ffffm.
+dl.services.ffffm.	IN	A	10.126.255.20	; 2.dl.services.ffffm.
+dl.services.ffffm.	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2	; 2.dl.services.ffffm.
 
-speedtest		300	IN	A	10.126.255.19
-speedtest		300	IN	AAAA	fddd:5d16:b5dd:0:3072:9ff:fe19:d546
 
-map			300	IN	CNAME	1.map.services.ffffm.
-hopglass		300	IN	A	10.126.255.30
-dns			IN	CNAME	1.bind.services
-ntp			IN	CNAME	1.ntp.services.ffffm.
-dl			IN	CNAME	dl.services.ffffm.
+1.updates.services.ffffm.	IN	CNAME	1.dl.services.ffffm.
+2.updates.services.ffffm.	IN	CNAME	2.dl.services.ffffm.
+updates.services.ffffm.	IN	CNAME	dl.services.ffffm.
 
-nextnode		IN	A	10.126.0.1
-next-node		IN	CNAME	nextnode
-ffnn			IN	CNAME	nextnode
-nn			IN	CNAME	nextnode
+
+1.inetgw.services.ffffm.	IN	A	10.126.255.11
+1.stats.services.ffffm.	IN	A	10.126.255.8
+1.dns.services.ffffm.	IN	A	10.126.255.14
+1.mail.services.ffffm.	IN	A	10.126.255.10
+1.map.services.ffffm.	IN	A	10.126.255.5
+1.proxy.services.ffffm.	IN	A	10.126.255.6
+1.uberspace.servers.ffffm.	IN	A	10.126.255.2
+1.seafile.services.ffffm.	IN	A	10.126.255.17
+1.bind.services.ffffm.	IN	A	10.126.255.14
+
+
+speedtest	IN	A	10.126.255.19
+speedtest	IN	AAAA	fddd:5d16:b5dd:0:3072:9ff:fe19:d546
+
+
+map	IN	CNAME	1.map.services.ffffm.
+hopglass	IN	A	10.126.255.30
+dns	IN	CNAME	1.bind.services
+ntp	IN	CNAME	1.ntp.services.ffffm.
+dl	IN	CNAME	dl.services.ffffm.
+
+
+nextnode	IN	A	10.126.0.1
+next-node	IN	CNAME	nextnode
+ffnn	IN	CNAME	nextnode
+nn	IN	CNAME	nextnode
 
