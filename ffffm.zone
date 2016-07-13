@@ -51,6 +51,8 @@ updates	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2 ; 2
 2.updates	IN	CNAME	2.dl.services.ffffm. ; 2
 fast.updates	IN 	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2  ; 2
 
+wo.updates	IN	CNAME	updates.services.ffffm.
+
 1.uberspace.servers.ffffm.	IN	A	10.126.255.2
 1.inetgw	IN	A	10.126.255.11
 1.stats	IN	A	10.126.255.8
