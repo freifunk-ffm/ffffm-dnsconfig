@@ -39,10 +39,13 @@ dl	IN	A	10.126.255.20	; 2.dl.services.ffffm.
 dl	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2	; 2.dl.services.ffffm.
 
 
-1.updates	IN	CNAME	1.dl.services.ffffm.
-2.updates	IN	CNAME	2.dl.services.ffffm.
-updates		IN	CNAME	dl.services.ffffm.
-fast.updates	IN 	CNAME	2.dl.services.ffffm. 
+updates	IN	A	10.126.255.6 ; 1
+updates	IN	A	10.126.255.20 ; 2
+updates	IN	AAAA	fddd:5d16:b5dd:0:1095:d4ff:fe05:4da4 ; 1
+updates	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2 ; 2
+1.updates	IN	CNAME	1.dl.services.ffffm. ; 1
+2.updates	IN	CNAME	2.dl.services.ffffm. ; 2
+fast.updates	IN 	AAAA	fddd:5d16:b5dd:0:5054:ff:fe05:66e2  ; 2
 
 1.uberspace.servers.ffffm.	IN	A	10.126.255.2
 1.inetgw	IN	A	10.126.255.11
