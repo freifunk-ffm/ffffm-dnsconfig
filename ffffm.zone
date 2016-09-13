@@ -73,6 +73,7 @@ dl	IN	CNAME	dl.services.ffffm.
 
 
 nextnode	IN	A	10.126.0.1
+nextnode	IN	AAAA	fddd:5d16:b5dd::1
 next-node	IN	CNAME	nextnode
 ffnn	IN	CNAME	nextnode
 nn	IN	CNAME	nextnode
