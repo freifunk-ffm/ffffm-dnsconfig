@@ -1,7 +1,7 @@
 ; ffffm
 $TTL 300	; 5 minutes
 ffffm.	IN	SOA	dns.ffm.freifunk.net. info.wifi-frankfurt.de. (
-	201609141	; Serial
+	201609191	; Serial
 	3H	; refresh after 3 hours
 	1H	; retry after 1 hour
 	1W	; expire after 1 week
@@ -78,3 +78,4 @@ next-node	IN	CNAME	nextnode
 ffnn	IN	CNAME	nextnode
 nn	IN	CNAME	nextnode
 
+ardusrv	IN	AAAA	fddd:5d16:b5dd:0:dacb:8aff:fe00:2bdb
