@@ -54,7 +54,7 @@ wo.updates	IN	CNAME	updates.services.ffffm.
 1.stats	IN	A	10.126.255.8
 1.dns	IN	A	10.126.255.14
 1.mail	IN	A	10.126.255.10
-1.map	IN	A	10.126.255.5
+1.map	IN	A	10.126.255.30
 1.proxy	IN	A	10.126.255.6
 1.seafile	IN	A	10.126.255.17
 1.bind	IN	A	10.126.255.14
@@ -66,7 +66,7 @@ speedtest	IN	AAAA	fddd:5d16:b5dd:0:3072:9ff:fe19:d546
 
 
 map	IN	CNAME	1.map.services.ffffm.
-hopglass	IN	A	10.126.255.30
+hopglass	IN	CNAME	1.map.services.ffffm.
 dns	IN	CNAME	1.bind.services
 ntp	IN	CNAME	1.ntp.services.ffffm.
 dl	IN	CNAME	dl.services.ffffm.
@@ -79,3 +79,7 @@ ffnn	IN	CNAME	nextnode
 nn	IN	CNAME	nextnode
 
 ardusrv	IN	AAAA	fddd:5d16:b5dd:0:dacb:8aff:fe00:2bdb
+
+streaming	IN	A	10.126.254.122
+streaming	IN	AAAA	fddd:5d16:b5dd:0:5054:ff:fe8a:430f
+
