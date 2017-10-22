@@ -20,11 +20,11 @@ $ORIGIN services.ffffm.
 ;Round Robin
 ntp	IN	A	10.126.255.14
 ntp	IN	AAAA	fddd:5d16:b5dd:0:743a:f7ff:febc:5ca1
-
+ntp	IN	AAAA    2a06:8187:fb11:1::b:1
 
 1.ntp	IN	A	10.126.255.14
 1.ntp	IN	AAAA	fddd:5d16:b5dd:0:743a:f7ff:febc:5ca1
-2.ntp	IN	CNAME	1.ntp.services.ffffm.
+2.ntp	IN	CNAME   ntp1.aixit.off.de.ffffm.net.
 3.ntp	IN	CNAME	1.ntp.services.ffffm.
 4.ntp	IN	CNAME	1.ntp.services.ffffm.
 5.ntp	IN	CNAME	1.ntp.services.ffffm.
